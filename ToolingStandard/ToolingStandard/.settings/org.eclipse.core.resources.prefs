@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//WebRoot/GoodsDetails.jsp=UTF-8
+encoding//WebRoot/Nav.jsp=UTF-8
+encoding//src/cn/ts/Dao/AdminDaoBusiness.java=UTF-8
+encoding//src/cn/ts/Dao/DaoBusiness.java=UTF-8
+encoding//src/cn/ts/Entity/PageBean.java=UTF-8
+encoding//src/cn/ts/RSA=GBK
+encoding//src/cn/ts/RSA/RSAUtils.java=UTF-8
+encoding//src/cn/ts/Service/AdminServiceBusiness.java=UTF-8
+encoding//src/cn/ts/Service/ServiceBusiness.java=UTF-8
+encoding//src/cn/ts/Web/Action.java=UTF-8
+encoding//src/cn/ts/Web/AdminAction.java=UTF-8
+encoding//src/cn/ts/Web/ShoppingCartAction.java=UTF-8
+encoding//src/cn/ts/Web/Verification.java=UTF-8

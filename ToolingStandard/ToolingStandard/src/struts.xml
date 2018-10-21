@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="demo1" extends="struts-default" namespace="/">
+		<interceptors>
+			<interceptor name="LoginInterceptor" class="cn.ts.Interceptor.LoginInterceptor"></interceptor>
+
+			<interceptor-stack name="mydefault">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="LoginInterceptor" />
+			</interceptor-stack>
+		</interceptors>
+
+		<!-- 前台action -->
+		<action name="login" class="action" method="login">
+			<result name="success">/index.jsp</result>
+			<result name="fairly">/login.jsp</result>
+		</action>
+
+		<action name="register" class="action" method="register">
+			<result name="success">/login.jsp</result>
+		</action>
+
+		<action name="trousers" class="action" method="Showtrousers">
+			<result name="success">/Trousers.jsp</result>
+			<result name="fairly">/login.jsp</result>
+		</action>
+
+		<action name="boutique" class="action" method="Showboutique">
+			<result name="success">/Boutique.jsp</result>
+			<result name="fairly">/login.jsp</result>
+		</action>
+
+		<action name="tops" class="action" method="Showtops">
+			<result name="success">/Tops.jsp</result>
+			<result name="fairly">/login.jsp</result>
+		</action>
+
+		<action name="shoppingCart" class="shoppingCart" method="shoppingCart">
+			<result name="success">/ShoppingCart.jsp</result>
+			<result name="fairly">/login.jsp</result>
+			<interceptor-ref name="mydefault"></interceptor-ref>
+		</action>
+
+		<action name="addGoods" class="shoppingCart" method="addGoods">
+			<result name="success" type="redirectAction">shoppingCart</result>
+			<result name="error">/login.jsp</result>
+		</action>
+
+		<action name="delGoods" class="shoppingCart" method="delGoods">
+			<result name="success" type="redirectAction">shoppingCart</result>
+		</action>
+
+		<action name="updateGoodsNum" class="shoppingCart" method="updateGoodsNum">
+			<result name="success" type="redirectAction">shoppingCart</result>
+		</action>
+
+		<!-- 清空购物车 -->
+		<action name="removeShoppingCart" class="shoppingCart" method="removeShoppingCart">
+			<result name="success" type="redirectAction">shoppingCart</result>
+		</action>
+
+
+		<action name="addComment" class="action" method="addComment">
+			<result name="success">/index.jsp</result>
+		</action>
+
+		<action name="exit" class="action" method="exit">
+			<result name="success">/index.jsp</result>
+		</action>
+
+		<!-- 商品详情页Action -->
+		<action name="goodsDetail" class="shoppingCart" method="goodsDetail">
+			<result name="success">/GoodsDetails.jsp</result>
+		</action>
+
+		<!-- 确认订单页action -->
+		<action name="confirmOrder" class="shoppingCart" method="confirmOrder">
+			<result name="success">/MyOrders.jsp</result>
+		</action>
+		
+		<!-- 我的订单页action -->
+		<action name="getUserOrderInfo" class="shoppingCart" method="getUserOrderInfo">
+			<result name="success">/MyOrders.jsp</result>
+			<result name="fairly">/login.jsp</result>
+			<interceptor-ref name="mydefault"></interceptor-ref>
+		</action>
+
+		<!-- 订单详情页action -->
+		<action name="orderDetail" class="shoppingCart" method="orderDetail">
+			<result name="success">/MyOrderDetails.jsp</result>
+		</action>
+
+
+		<!-- 后台action -->
+		<action name="admin" class="adminAction">
+			<result type="redirectAction">
+				<param name="namespace">/Admin</param>
+				<param name="actionName">adminL</param>
+			</result>
+		</action>
+
+		<!-- 检测action -->
+		<action name="checkusername" class="verification" method="checkusername"></action>
+
+	</package>
+
+	<package name="Admin" extends="struts-default" namespace="/Admin">
+		<!-- 后台action -->
+		<action name="adminL" class="adminAction">
+			<result name="success">/Admin/Adminlogin.jsp</result>
+		</action>
+
+		<action name="adminlogin" class="adminAction" method="adminlogin">
+			<result name="success">/Admin/index.jsp</result>
+		</action>
+
+		<action name="top" class="adminAction">
+			<result name="success">/Admin/top.jsp</result>
+		</action>
+
+		<action name="showAllGoods" class="adminAction" method="getAllGoods">
+			<result name="success">/Admin/goodsUpdate.jsp</result>
+		</action>
+
+		<action name="showGoodsSingle" class="adminAction" method="getGoodsByGoodsId">
+			<result name="success">/Admin/goodsSingle.jsp</result>
+		</action>
+
+		<action name="delGoods" class="adminAction" method="delGoods">
+			<result name="success" type="redirectAction">showAllGoods</result>
+		</action>
+
+		<action name="showOrderInfo" class="adminAction" method="showOrderInfo">
+			<result name="success">/Admin/OrderStatusUpdate.jsp</result>
+		</action>
+
+		<action name="Shipments" class="adminAction" method="Shipments">
+			<result name="success" type="redirectAction">showOrderInfo</result>
+		</action>
+
+		<action name="addgoods" class="adminAction" method="AddGoods">
+			<result name="success">AddGoods.jsp</result>
+		</action>
+
+		<action name="upload" class="adminAction" method="upload">
+			<result name="success" type="redirectAction">showAllGoods</result>
+			<result name="error" type="redirectAction">addgoods</result>
+		</action>
+
+		<action name="updateUpload" class="adminAction" method="updateUpload">
+			<result name="success" type="redirectAction">showAllGoods</result>
+		</action>
+
+		<action name="exit" class="adminAction" method="exit">
+			<result name="success">Adminlogin.jsp</result>
+		</action>
+
+	</package>
+</struts>    

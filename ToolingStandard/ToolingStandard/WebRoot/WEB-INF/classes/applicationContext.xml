@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+	<!-- 前台bean -->
+	<bean id="action" class="cn.ts.Web.Action" scope="prototype"></bean>
+	<bean id="shoppingCart" class="cn.ts.Web.ShoppingCartAction" scope="prototype"></bean>
+	<bean id="daoBusiness" class="cn.ts.Dao.DaoBusiness">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="serviceBusiness" class="cn.ts.Service.ServiceBusiness">
+
+	</bean>
+	<!-- 后台bean -->
+	<bean id="adminDaoBusiness" class="cn.ts.Dao.AdminDaoBusiness">
+	<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="adminServiceBusiness" class="cn.ts.Service.AdminServiceBusiness"></bean>
+	<bean id="adminAction" class="cn.ts.Web.AdminAction" scope="prototype"></bean>
+     
+    <!-- 检测bean -->
+    <bean id="verification" class="cn.ts.Web.Verification" scope="prototype"></bean>
+    
+	<context:component-scan base-package="cn.ts"></context:component-scan>
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="url"
+			value="jdbc:sqlserver://127.0.0.1:1433;databaseName=TS">
+		</property>
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+		<property name="username" value="qjd"></property>
+		<property name="password" value="123456"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.SQLServer2008Dialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>cn/ts/Entity/Users.hbm.xml</value>
+				<value>cn/ts/Entity/Trousers.hbm.xml</value>
+				<value>cn/ts/Entity/Tops.hbm.xml</value>
+				<value>cn/ts/Entity/ShoppingCart.hbm.xml</value>
+				<value>cn/ts/Entity/Boutique.hbm.xml</value>
+				<value>cn/ts/Entity/Comment.hbm.xml</value>
+				<value>cn/ts/Entity/Admin.hbm.xml</value>
+				<value>cn/ts/Entity/Category.hbm.xml</value>
+				<value>cn/ts/Entity/Stock.hbm.xml</value>
+				<value>cn/ts/Entity/GoodsComment.hbm.xml</value>
+				<value>cn/ts/Entity/OrderDetail.hbm.xml</value>
+				<value>cn/ts/Entity/OrderInfo.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+</beans>
