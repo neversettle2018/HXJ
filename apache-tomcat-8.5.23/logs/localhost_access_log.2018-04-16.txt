@@ -1,0 +1,7 @@
+127.0.0.1 - - [16/Apr/2018:23:33:33 +0800] "GET / HTTP/1.1" 200 11452
+127.0.0.1 - - [16/Apr/2018:23:33:55 +0800] "GET /Demo/genre_edit.jsp HTTP/1.1" 200 1291
+127.0.0.1 - - [16/Apr/2018:23:33:56 +0800] "GET //Demo/genre_edit.jsp HTTP/1.1" 200 1291
+127.0.0.1 - - [16/Apr/2018:23:34:16 +0800] "POST //Demo/GenreSaveServlet HTTP/1.1" 302 -
+127.0.0.1 - - [16/Apr/2018:23:34:16 +0800] "GET //Demo/GenreListServlet HTTP/1.1" 200 3893
+127.0.0.1 - - [16/Apr/2018:23:34:22 +0800] "GET //Demo/GenreDeleteServlet?id=9 HTTP/1.1" 302 -
+127.0.0.1 - - [16/Apr/2018:23:34:22 +0800] "GET //Demo/GenreListServlet HTTP/1.1" 200 3672

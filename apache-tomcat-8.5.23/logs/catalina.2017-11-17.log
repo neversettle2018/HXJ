@@ -1,0 +1,42 @@
+17-Nov-2017 22:18:30.280 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.23
+17-Nov-2017 22:18:30.289 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 28 2017 10:30:11 UTC
+17-Nov-2017 22:18:30.290 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.23.0
+17-Nov-2017 22:18:30.291 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 7
+17-Nov-2017 22:18:30.292 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.1
+17-Nov-2017 22:18:30.293 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+17-Nov-2017 22:18:30.294 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             D:\Program Files\Java\jdk1.8.0_121\jre
+17-Nov-2017 22:18:30.296 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_121-b13
+17-Nov-2017 22:18:30.297 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+17-Nov-2017 22:18:30.299 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\apache-tomcat-8.5.23
+17-Nov-2017 22:18:30.302 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\apache-tomcat-8.5.23
+17-Nov-2017 22:18:30.303 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\apache-tomcat-8.5.23\conf\logging.properties
+17-Nov-2017 22:18:30.304 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+17-Nov-2017 22:18:30.306 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+17-Nov-2017 22:18:30.307 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+17-Nov-2017 22:18:30.308 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\apache-tomcat-8.5.23
+17-Nov-2017 22:18:30.310 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\apache-tomcat-8.5.23
+17-Nov-2017 22:18:30.311 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\apache-tomcat-8.5.23\temp
+17-Nov-2017 22:18:30.313 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+17-Nov-2017 22:18:30.314 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+17-Nov-2017 22:18:30.315 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+17-Nov-2017 22:18:31.106 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+17-Nov-2017 22:18:31.281 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+17-Nov-2017 22:18:31.524 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+17-Nov-2017 22:18:31.528 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+17-Nov-2017 22:18:31.534 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+17-Nov-2017 22:18:31.535 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1754 ms
+17-Nov-2017 22:18:31.566 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+17-Nov-2017 22:18:31.567 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.23
+17-Nov-2017 22:18:31.581 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\apache-tomcat-8.5.23\webapps\docs]
+17-Nov-2017 22:18:31.963 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\apache-tomcat-8.5.23\webapps\docs] has finished in [382] ms
+17-Nov-2017 22:18:31.965 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\apache-tomcat-8.5.23\webapps\examples]
+17-Nov-2017 22:18:32.339 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\apache-tomcat-8.5.23\webapps\examples] has finished in [357] ms
+17-Nov-2017 22:18:32.341 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\apache-tomcat-8.5.23\webapps\host-manager]
+17-Nov-2017 22:18:32.408 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\apache-tomcat-8.5.23\webapps\host-manager] has finished in [67] ms
+17-Nov-2017 22:18:32.410 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\apache-tomcat-8.5.23\webapps\manager]
+17-Nov-2017 22:18:32.437 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\apache-tomcat-8.5.23\webapps\manager] has finished in [27] ms
+17-Nov-2017 22:18:32.442 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\apache-tomcat-8.5.23\webapps\ROOT]
+17-Nov-2017 22:18:32.474 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\apache-tomcat-8.5.23\webapps\ROOT] has finished in [32] ms
+17-Nov-2017 22:18:32.478 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+17-Nov-2017 22:18:32.493 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+17-Nov-2017 22:18:32.501 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 965 ms
