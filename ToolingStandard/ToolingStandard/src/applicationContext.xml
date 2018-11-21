@@ -36,7 +36,7 @@
 			value="jdbc:sqlserver://127.0.0.1:1433;databaseName=TS">
 		</property>
 		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
-		<property name="username" value="qjd"></property>
+		<property name="username" value="hxj"></property>
 		<property name="password" value="123456"></property>
 	</bean>
 	<bean id="sessionFactory"
